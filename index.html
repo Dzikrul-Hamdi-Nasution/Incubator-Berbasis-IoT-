@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data Loger Tetas Telur</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="bootstrap/js/style.js"></script> -->
+    <link rel="stylesheet" href="Station_data.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+          <form class="d-flex">
+            <span class="navbar-brand mb-0 h1"> <img src="../Tetas Telur/assets/img/fixdy.png" alt="icon" style="width: 80px;"></span>
+              </form>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="kotakb p-3 mb-5 bg-body rounded" style="float: right;">
+                        <div class="card" style="width: 18rem; float: right;">
+                            <div class="kotak2 card-body">
+                                <h5 class="card-title">Kelembapan <img src="../Data Loger/assets/img/water.svg" alt="" style="width: 40px;"></h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Kelembapan Udara </h6>
+                                <p class="card-text"><input style="border: none;" type="text" id="do" readonly /></p>
+                                 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="kotakc p-3 mb-5 bg-body rounded" style="float: left;">
+                        <div class="card" style="width: 18rem;">
+                            <div class="kotak3 card-body">
+                                <h5 class="card-title">Suhu <img src="../Data Loger/assets/img/water2.svg" alt="" style="width: 40px;"></h5>
+                                <h6 class="card-subtitle mb-2 text-muted">Tingkat Suhu</h6>
+                                <p class="card-text"><input style="border: none;" type="text" id="keruh" readonly /></p>
+                                <li data-toggle="modal" data-target="#mydaftar" class="btn btn-success">Set Suhu</li>
+                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    
+    <script src="main.js"></script>
+
+
+    <div id="mydaftar" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Set suhu Inkubator</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+        
+          <div class="form-group">
+            <label for="exampleInputEmail1">Suhu Ruangan Inkubator (Celcius)</label>
+            <input type="number" class="form-control" id="set_suhu" placeholder="Suhu Celcius">
+          </div>
+        </form>
+            </div>
+            <div class="modal-footer">
+           
+             <button onclick="update_suhu()" type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+</body>
+
+</html>
